@@ -44,7 +44,7 @@ function Store(locationName, minCustPerHour, maxCustPerHour, avgCookiesPerCust, 
     console.log(this.totalDailyCookieSales, 'total daily cookie sales ');
   }
   // this.render = function() {
-    this.calcCookiesPerHour();
+  this.calcCookiesPerHour();
   //   var CookieSalesList = document.getElementById(this.domId);
   //   for (var i = 0; i < hoursOpen.length; i++) {
   //     var liElement = document.createElement('li');
@@ -92,17 +92,17 @@ for (var i = 0; i < allStores.length; i++) {
   tdEl.textContent = allStores[i].locationName;
   bodytrEl.appendChild(tdEl);
 
-    for (var x = 0; x < allStores[i].cookiesPerHour.length; x++) {
-      var tdElData = document.createElement('td');
-      tdElData.textContent = allStores[i].cookiesPerHour[x];
-      bodytrEl.appendChild(tdElData);
+  for (var x = 0; x < allStores[i].cookiesPerHour.length; x++) {
+    var tdElData = document.createElement('td');
+    tdElData.textContent = allStores[i].cookiesPerHour[x];
+    bodytrEl.appendChild(tdElData);
 
-    }
-    var totalData = document.createElement('td');
-    totalData.textContent = allStores[i].totalDailyCookieSales;
-    bodytrEl.appendChild(totalData);
+  }
+  var totalData = document.createElement('td');
+  totalData.textContent = allStores[i].totalDailyCookieSales;
+  bodytrEl.appendChild(totalData);
 
-    cookiesTable.appendChild(bodytrEl);
+  cookiesTable.appendChild(bodytrEl);
 }
 
 
