@@ -98,6 +98,10 @@ for (var i = 0; i < allStores.length; i++) {
       bodytrEl.appendChild(tdElData);
 
     }
+    var totalData = document.createElement('td');
+    totalData.textContent = allStores[i].totalDailyCookieSales;
+    bodytrEl.appendChild(totalData);
+
     cookiesTable.appendChild(bodytrEl);
 }
 
