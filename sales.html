@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel"stylesheet" href="style.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <ul id = "alki"></ul>
-    <ul id = "pike"></ul>
-    <ul id = "seattlecenter"></ul>
-    <ul id = "capitolhill"></ul>
-    <ul id = "seatac"></ul>
+    <h1>Salmon Cookies</h1>
+      <form id="store_form">cookiesForm
+        <fieldset>
+      <legend>Cookie Estimate Form</legend>
 
+      <label for="store_name">storeName: </label>
+      <input name="store_name" type="text" />
+
+      <label for="estimate_cookies_min">cookiesMin: </label>
+      <input name="estimate_cookies_min" type="text" size="20" />
+
+      <label for="estimate_cookies_max">cookiesMax: </label>
+      <input name="estimate_cookies_max" type="text" size="20" />
+
+      <label for="estimate_customers">customers: </label>
+      <input name="estimate_customers" type="text" size="20" />
+
+      <!-- <label for="totals">totals: </label>
+      <input name="totals" type="text" size="20" /> -->
+
+      <button type="submit">submit</button>
+    </fieldset>
+    </form>
+
+//////////////////////////////////////////////
     <h3>Here's the table made with JavaScript</h3>
+
+
+
   <table id="cookiesjs"></table>
 
     <script src="app.js" type="text/javascript"></script>
