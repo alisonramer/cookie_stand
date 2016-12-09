@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <link rel"stylesheet" href="style.css">
   <head>
@@ -6,8 +6,106 @@
     <title></title>
   </head>
   <body>
-    
+     -->
 
 
-  </body>
+  <!-- </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Liquid Layout</title>
+		<style type="text/css">
+			* {
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;
+				text-align: center;}
+			body {
+				width: 90%;
+				margin: 0 auto;}
+			#content {
+				overflow: auto;}
+			#nav, #feature, #footer {
+				margin: 1%;}
+			.column1, .column2, .column3 {
+				width: 31.3%;
+				float: left;
+				margin: 1%;}
+			.column3 {
+				margin-right: 0%;}
+			li {
+				display: inline;
+				padding: 2.00em;}
+			#nav, #footer {
+				background-color: #efefef;
+				padding: 0.5em 0;}
+			#hero, .article {
+				height: 10em;
+				margin-bottom: 1em;
+				background-color: #efefef;}
+      #location, .article {
+  			height: 10em;
+  			margin-bottom: 1em;
+  			background-color: #efefef;}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<h1>Logo</h1>
+			<div id="nav">
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Order</a></li>
+					<li><a href="">Locations</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div id="hero">
+				<p>Hero</p>
+			</div>
+
+      <div id="location">
+        <p>Location</p>
+      </div>
+
+    <div class="article column1">
+      				<p>About One</p>
+      			</div>
+      			<div class="article column2">
+      				<p>About Two</p>
+      			</div>
+      			<div class="article column3">
+      				<p>About Three</p>
+     </div>
+
+			<div class="article column1">
+				<p>Cookies One</p>
+        <img src="images/salmonpillow.jpg" alt="Quokka (Setonix brachyurus)" width="300" height="225" />
+
+			</div>
+			<div class="article column2">
+				<p>Cookies Two</p>
+			</div>
+			<div class="article column3">
+				<p>Cookies Three</p>
+      </div>
+
+      <div class="article column1">
+  				<p>Gift One</p>
+  		</div>
+  		<div class="article column2">
+  				<p>Gift Two</p>
+  		</div>
+  		<div class="article column3">
+  		<p>Gift Three</p>
+			</div>
+
+		<div id="footer">
+			<p>&copy; Copyright Salmon Cookies - Alison Ramer</p>
+		</div>
+	</body>
 </html>
