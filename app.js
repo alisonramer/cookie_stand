@@ -23,9 +23,9 @@ function Store(locationName, minCustPerHour, maxCustPerHour, avgCookiesPerCust){
   this.calcRandCustPerHour = function (){
     for (var i = 0; i < hoursOpen.length; i++) {
       this.randCustPerHour.push(Math.ceil(Math.random() * (this.maxCustPerHour - this.minCustPerHour) + this.minCustPerHour));
-    console.log(this.randCustPerHour, 'customers per hour ');
+      console.log(this.randCustPerHour, 'customers per hour ');
+    }
   }
-}
   this.calcCookiesPerHour = function () {
     this.calcRandCustPerHour();
     for (var j = 0; j < this.randCustPerHour.length; j++) {
