@@ -3,18 +3,19 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Global variables linking to HTML
 
-var hoursOpen = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm',];
+var hoursOpen = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var allStores = [];
 var cookiesTable = document.getElementById('cookiesjs');
 var store_form = document.getElementById('store_form');
 
 //This is the constructor function (the mold) //
-
 function Store(locationName, minCustPerHour, maxCustPerHour, avgCookiesPerCust){
+  //for each one of the properties of the stores we're going to make the following calculations //
   this.locationName = locationName;
   this.minCustPerHour = minCustPerHour;
   this.maxCustPerHour = maxCustPerHour;
   this.avgCookiesPerCust = avgCookiesPerCust;
+  //
   this.randCustPerHour = [];
   this.cookiesPerHour = [];
   this.totalDailyCookieSales = 0;
@@ -36,6 +37,7 @@ function Store(locationName, minCustPerHour, maxCustPerHour, avgCookiesPerCust){
     console.log(this.cookiesPerHour, 'cookies per hour ');
     console.log(this.totalDailyCookieSales, 'total daily cookie sales ');
   }
+  //now we are going to put all this information that we've calculated and we're going to put it into a table//
   this.render = function() {
     var storeRow = document.createElement('tr')
     var dataCell = document.createElement('td');
@@ -48,7 +50,7 @@ function Store(locationName, minCustPerHour, maxCustPerHour, avgCookiesPerCust){
       storeRow.appendChild(dataCell);
     }
     dataCell = document.createElement('td');
-    dataCell.textContent = this.totalDailyCookiesSold;
+    dataCell.textContent = this.totalDailyCookieSales;
     storeRow.appendChild(dataCell);
     cookiesTable.appendChild(storeRow);
   }
@@ -56,22 +58,9 @@ function Store(locationName, minCustPerHour, maxCustPerHour, avgCookiesPerCust){
   this.calcCookiesPerHour();
 }
 
-var firstAndPike = new Store('1st and Pike', 23, 65, 6.3);
-var seaTacAirport = new Store('Sea Tac Airport', 3, 23, 1.2);
-var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
-var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
-var alki = new Store('Alki', 2, 16, 4.6);
-
-// Push stores to allstore array
-allStores.push(firstAndPike);
-allStores.push(seaTacAirport);
-allStores.push(seattleCenter);
-allStores.push(capitolHill);
-allStores.push(alki);
-
 //Table begins//
 function header(){
-//This makes the row header//
+//This makes the header and is decoupled because there is different calcuations to be done/not done here//
   var trEl = document.createElement('tr');
   var blankthEl = document.createElement('th');
   trEl.appendChild(blankthEl);
@@ -89,13 +78,20 @@ function header(){
   cookiesTable.appendChild (trEl);
 }
 
-
 function storeRow() {
   for (var i = 0; i < allStores.length; i++) {
     allStores[i].render();
   }
 }
 
+function superTotal(){
+  var sum = 0
+  for (var i = 0; i < allStores.length; i++) {
+    sum += allStores[i].totalDailyCookieSales;
+  }
+
+  return sum;
+}
 
 function footerRow(){
 //creates total data and pins it to the footerRow//
@@ -104,16 +100,21 @@ function footerRow(){
   totalData.textContent = 'totals'
   footerRow.appendChild(totalData);
 
-  for (var i = 0; i < allStores[1].totalDailyCookieSales.length; i++) {
+  for (var i = 0; i < hoursOpen.length; i++) {
+    var sum = 0;
 
     for (var x = 0; x < allStores.length; x++) {
-      allStores += allStores[x].totalDailyCookieSales[x];
+      sum += allStores[x].cookiesPerHour[i];
 
     }
     totalData = document.createElement('td');
-    totalData.textContent = allStores;
+    totalData.textContent = sum;
     footerRow.appendChild(totalData);
   }
+  totalData = document.createElement('td');
+  totalData.textContent = superTotal();
+  footerRow.appendChild(totalData);
+  cookiesTable.appendChild(footerRow);
 }
   // footerRow();
 
@@ -143,6 +144,21 @@ function handleSubmit(event) {
   storeRow();
   footerRow();
 }
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+var firstAndPike = new Store('1st and Pike', 23, 65, 6.3);
+var seaTacAirport = new Store('Sea Tac Airport', 3, 23, 1.2);
+var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
+var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
+var alki = new Store('Alki', 2, 16, 4.6);
+
+// Push stores to allstore array
+allStores.push(firstAndPike);
+allStores.push(seaTacAirport);
+allStores.push(seattleCenter);
+allStores.push(capitolHill);
+allStores.push(alki);
 
 header();
 storeRow();
