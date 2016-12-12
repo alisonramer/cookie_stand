@@ -1,0 +1,76 @@
+* {
+  font-family: Arial, Verdana, sans-serif;
+  color: black;
+  text-align: center;
+
+}
+
+body {
+  margin: 0 auto;
+}
+.clear-box {
+  clear: both;
+}
+
+.boxwrapper{
+  margin: 0 auto;
+  width: 70%;
+}
+
+#content {
+  overflow: auto;
+}
+
+.column {
+  height: auto;
+  width: 31.3%;
+  float: left;
+  margin: 1%;
+}
+
+.gift{
+  background-color: #2E486A;
+  height: 300px;
+}
+
+.flavors{
+  background-color: #558644;
+  height: 267.17px;
+}
+
+.salmon, .chinook{
+  z-index: 1;
+}
+
+li {
+  display: inline;
+  padding: 2.00em;
+  z-index: 10;
+}
+
+#header, #footer {
+background-color: #DFAA80;
+padding: 0.5em 0;
+opacity: 0.5;
+}
+
+#hero {
+  overflow: hidden;
+}
+
+nav {
+  color: black;
+  position: fixed;
+  /*z-index: 10;*/
+}
+
+#location {
+  position: relative;
+  height: 20em;
+  background-color: #DFAA70;
+  opacity: 0.5;
+}
+
+#footer{
+bottom: 0px;
+}

@@ -1,113 +1,113 @@
-<!-- <!DOCTYPE html>
-<html>
-<link rel"stylesheet" href="style.css">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-     -->
-
-
-  <!-- </body>
-</html> -->
-
+<!-- User-facing Sales Website -->
 <!DOCTYPE html>
 <html>
+<link href="index.css" type"text/index" rel="stylesheet" />
 	<head>
-		<title>Liquid Layout</title>
+
+		<title>Pat's Salmon Cookies</title>
 		<style type="text/css">
-			* {
-				font-family: Arial, Verdana, sans-serif;
-				color: #665544;
-				text-align: center;}
-			body {
-				width: 90%;
-				margin: 0 auto;}
-			#content {
-				overflow: auto;}
-			#nav, #feature, #footer {
-				margin: 1%;}
-			.column1, .column2, .column3 {
-				width: 31.3%;
-				float: left;
-				margin: 1%;}
-			.column3 {
-				margin-right: 0%;}
-			li {
-				display: inline;
-				padding: 2.00em;}
-			#nav, #footer {
-				background-color: #efefef;
-				padding: 0.5em 0;}
-			#hero, .article {
-				height: 10em;
-				margin-bottom: 1em;
-				background-color: #efefef;}
-      #location, .article {
-  			height: 10em;
-  			margin-bottom: 1em;
-  			background-color: #efefef;}
+
 		</style>
 	</head>
 	<body>
 		<div id="header">
-			<h1>Logo</h1>
-			<div id="nav">
-				<ul>
-					<li><a href="">Home</a></li>
-					<li><a href="">About</a></li>
-					<li><a href="">Order</a></li>
-					<li><a href="">Locations</a></li>
-					<li><a href="">Contact</a></li>
-				</ul>
-			</div>
+          <!-- how do i get the title here and the fish to be the front -->
+      <div id="logo">
+      <ul>
+          <li><img src="salmon.png" alt="Salmon" height="60px"/></li>
+          <li>PAT'S SALMON COOKIES</li>
+          <li><img src="chinook.png" alt="Chinook" height="73px"/></li>
+      </div>
 		</div>
+
 		<div id="content">
 			<div id="hero">
-				<p>Hero</p>
-        <img src="family.jpg" alt="Family" />
+           <img src="family.jpg" alt="Family" />
 			</div>
 
       <div id="location">
-        <p>Location</p>
+        <div id="nav">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Order</a></li>
+            <li><a href="">Locations</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+          <h2>Fresh baked cookies, espresso, and Seattle's coolest salmon gifts!</h2>
+        </div>
+
+        <div id="contact" text-align: "right">
+          <p>1111 E PIKE ST </p>
+          <p>
+          SEATTLE, WA 98122<br>
+          MON-FRI: 8AM-10PM<br>
+          SAT-SUN: 9AM-10PM<br>
+          </p>
+          <p>
+          CapitolHill@salmoncookies.com<br>
+          (206)701-9579<br>
+        </p>
+      </div>
+      <!-- How do i get the text to align left!  -->
+        <div id="contact2" text-align=left>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </div>
+      </div>
       </div>
 
-    <div class="article column1">
-      				<p>About One</p>
-      			</div>
-      			<div class="article column2">
-      				<p>About Two</p>
-      			</div>
-      			<div class="article column3">
-      				<p>About Three</p>
-     </div>
+    <div class="clear-box"></div>
+    <div class="boxwrapper">
 
-			<div class="article column1">
-				<p>Cookies One</p>
-        <img src="pillows.jpg" alt="Pillows" width="300" height="300" />
-
-			</div>
-			<div class="article column2">
-				<p>Cookies Two</p>
-        <img src="shirt.jpg" alt="Shirt" width="300" height="300" />
-			</div>
-			<div class="article column3">
-				<p>Cookies Three</p>
+      <div class="article column">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <!-- how do i get the text here to be white? -->
+      <div class="article column button" color=white>
+        <!-- I still need to make this button hover.  -->
+      	<p>BUY COOKIES BUTTON</p>
       </div>
 
-      <div class="article column1">
-  				<p>Gift One</p>
-  		</div>
-  		<div class="article column2">
-  				<p>Gift Two</p>
-  		</div>
-  		<div class="article column3">
-  		<p>Gift Three</p>
+      <div class="article column">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      </div>
+
+			<div class="article column flavors">
+				<p><br><br>FLAVORS<br><br></p>
+
 			</div>
 
-		<div id="footer">
-			<p>&copy; Copyright Salmon Cookies - Alison Ramer</p>
+      <div class="article column">
+        <img src="cutter.jpeg" alt="cutter" width=100% height=100%/>
+
+			</div>
+
+      <div class="article column">
+        <img src="cookieswithsalmon.jpg" alt="cookiesontable" width="100%" height="100%"/>
+      </div>
+
+      <div class="article column">
+          <img src="pillows.jpg" alt="Pillows" width="300" height="300" />
+  		</div>
+
+      <div class="article column">
+          <img src="shirt.jpg" alt="Shirt" width="300" height="300" />
+  		</div>
+
+<!-- //can I have spaces here in the class names?// -->
+      <div class="article column gift">
+  		   <p><br><br>SALMON STYLE<br><br></p>
+<!-- This is uper ugly with the breaks. How would I put the text in the middle of the box more elegantly? -->
+			</div>
+    </div>
+
+    <div class="clear-box"></div>
+
+    <div id="footer">
+			<p>&copy; Copyright Salmon Cookies - Designed and Developed by Alison Ramer</p>
 		</div>
-	</body>
+
+  </body>
+
 </html>
