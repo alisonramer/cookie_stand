@@ -97,7 +97,7 @@ function footerRow(){
 //creates total data and pins it to the footerRow//
   var footerRow = document.createElement('tr');
   var totalData = document.createElement('td');
-  totalData.textContent = 'totals'
+  totalData.textContent = 'Totals'
   footerRow.appendChild(totalData);
 
   for (var i = 0; i < hoursOpen.length; i++) {

@@ -1,19 +1,22 @@
 * {
-font-family: sans-serif;  
+	font-family: Arial, Verdana, sans-serif;
+  color: black;
+  text-align: center;
 }
 
 
-{
-table, td {
-	border: 1px solid black;
+#cookiesjs{
+	background-color:  #DFAA80;
+	/*opacity: 0.5;*/
 }
 
 td {
 	padding: 10px;
 	border-radius: 15px;
+	font-size: 18px;
 }
 
 th {
-	background-color: navy;
-	color: white;
+	font-size: 18px;
+	letter-spacing: .8px;
 }
